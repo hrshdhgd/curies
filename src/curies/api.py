@@ -1066,7 +1066,7 @@ class Converter:
         *,
         strict: Literal[False] = False,
         passthrough: Literal[False] = False,
-    ) -> Optional[str]: 
+    ) -> Optional[str]:
         ...
 
     def compress_or_standardize(
