@@ -1140,7 +1140,7 @@ class Converter:
     @overload
     def compress(
         self, uri: str, *, strict: Literal[False] = False, passthrough: Literal[False] = False
-    ) -> Optional[str]: 
+    ) -> Optional[str]:
         ...
 
     def compress(
@@ -1258,7 +1258,7 @@ class Converter:
         *,
         strict: Literal[False] = False,
         passthrough: Literal[False] = False,
-    ) -> Optional[str]: 
+    ) -> Optional[str]:
         ...
 
     def expand_or_standardize(
@@ -1332,7 +1332,7 @@ class Converter:
     @overload
     def expand(
         self, curie: str, *, strict: Literal[False] = False, passthrough: Literal[False] = False
-    ) -> Optional[str]: 
+    ) -> Optional[str]:
         ...
 
     def expand(
@@ -1487,7 +1487,7 @@ class Converter:
     @overload
     def standardize_prefix(
         self, prefix: str, *, strict: Literal[False] = False, passthrough: Literal[False] = False
-    ) -> Optional[str]: 
+    ) -> Optional[str]:
         ...
 
     def standardize_prefix(
@@ -1546,7 +1546,7 @@ class Converter:
     @overload
     def standardize_curie(
         self, curie: str, *, strict: Literal[False] = False, passthrough: Literal[False] = False
-    ) -> Optional[str]: 
+    ) -> Optional[str]:
         ...
 
     def standardize_curie(
@@ -1608,7 +1608,7 @@ class Converter:
     @overload
     def standardize_uri(
         self, uri: str, *, strict: Literal[False] = False, passthrough: Literal[False] = False
-    ) -> Optional[str]: 
+    ) -> Optional[str]:
         ...
 
     def standardize_uri(
