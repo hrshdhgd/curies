@@ -272,7 +272,7 @@ class Record(BaseModel):  # type:ignore
     )
 
     @field_validator("prefix_synonyms")  # type:ignore
-    def prefix_not_in_synonyms(cls, v: str, values: Mapping[str, Any]) -> str: # noqa:N805
+    def prefix_not_in_synonyms(cls, v: str, values: Mapping[str, Any]) -> str:  # noqa:N805
         """Check that the canonical prefix does not apper in the prefix synonym list."""
         if pydantic_version.startswith("1."):
             prefix = values["prefix"]
@@ -283,7 +283,7 @@ class Record(BaseModel):  # type:ignore
         return v
 
     @field_validator("uri_prefix_synonyms")  # type:ignore
-    def uri_prefix_not_in_synonyms(cls, v: str, values: Mapping[str, Any]) -> str: # noqa:N805
+    def uri_prefix_not_in_synonyms(cls, v: str, values: Mapping[str, Any]) -> str:  # noqa:N805
         """Check that the canonical URI prefix does not apper in the URI prefix synonym list."""
         if pydantic_version.startswith("1."):
             uri_prefix = values["uri_prefix"]
@@ -339,14 +339,14 @@ class DuplicateValueError(ValueError):
 class DuplicateURIPrefixes(DuplicateValueError):
     """An error raised with constructing a converter with data containing duplicate URI prefixes."""
 
-    def __str__(self) -> str: # noqa:D105
+    def __str__(self) -> str:  # noqa:D105
         return f"Duplicate URI prefixes:\n{self._str()}"
 
 
 class DuplicatePrefixes(DuplicateValueError):
     """An error raised with constructing a converter with data containing duplicate prefixes."""
 
-    def __str__(self) -> str: # noqa:D105
+    def __str__(self) -> str:  # noqa:D105
         return f"Duplicate prefixes:\n{self._str()}"
 
 
